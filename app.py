@@ -54,6 +54,7 @@ def find(line):
     for i in line.lower():
         if(i=="good"):
             return 1
+    return 0
 
 if st.button('Predict'):
     
