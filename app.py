@@ -51,7 +51,9 @@ st.title("Movie Review-Sentiment Analysis Model")
 review=st.text_area("give your review :)")
 
 def find(line):
-    for i in line.lower():
+    line=line.lower()
+    words = line.split(" ")
+    for i in words:
         if(i=="good"):
             return 1
     return 0
