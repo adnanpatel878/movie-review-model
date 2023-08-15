@@ -49,14 +49,25 @@ model=pickle.load(open('movi.pkl','rb'))
 
 st.title("Movie Review-Sentiment Analysis Model")
 review=st.text_area("give your review :)")
-if st.button('Predict'):
-    
 
+def find(line):
+    for i in line.lower():
+        if(i=="good"):
+            return 1
+
+if st.button('Predict'):
+    st.header("Positive :heart_eyes:")
+        st.text("Maaza aa gaya")
+    
+    if(find(review)):
+        
   
     clean=transform_text(review)
     vector_input=tfidf.transform([clean]).toarray()
     result=model.predict(vector_input)[0]
 
+
+    
     if result==1:
         st.header("Positive :heart_eyes:")
         st.text("Maaza aa gaya")
