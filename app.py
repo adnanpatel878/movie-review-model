@@ -60,6 +60,9 @@ if st.button('Predict'):
         st.text("Maaza aa gaya")
     
     if(find(review)):
+        st.header("Positive :heart_eyes:")
+        st.text("Maaza aa gaya")
+        
         
   
     clean=transform_text(review)
