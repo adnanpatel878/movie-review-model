@@ -56,27 +56,27 @@ def find(line):
             return 1
 
 if st.button('Predict'):
-    st.header("Positive :heart_eyes:")
-        st.text("Maaza aa gaya")
+    
     
     if(find(review)):
         st.header("Positive :heart_eyes:")
         st.text("Maaza aa gaya")
         
         
+    else:    
   
-    clean=transform_text(review)
-    vector_input=tfidf.transform([clean]).toarray()
-    result=model.predict(vector_input)[0]
+        clean=transform_text(review)
+        vector_input=tfidf.transform([clean]).toarray()
+        result=model.predict(vector_input)[0]
 
 
     
-    if result==1:
-        st.header("Positive :heart_eyes:")
-        st.text("Maaza aa gaya")
-    else :
-        st.header("negative :rage:")
-        st.text("Paisa barbaad")
+        if result==1:
+            st.header("Positive :heart_eyes:")
+            st.text("Maaza aa gaya")
+        else :
+            st.header("negative :rage:")
+            st.text("Paisa barbaad")
         
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
